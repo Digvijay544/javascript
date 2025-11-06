@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .welcome-container {
+            text-align: center;
+            padding: 60px 40px;
+        }
+        .welcome-container h1 {
+            color: #2ecc71;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+        .welcome-container p {
+            font-size: 1.3rem;
+            color: #555;
+            margin: 15px 0;
+        }
+        #welcomeMessage {
+            font-size: 1.5rem;
+            color: #3498db;
+            font-weight: 600;
+            margin-top: 25px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container welcome-container">
+        <h1>Congratulations! 🎉🎊✨</h1>
+        <p>Your information has been submitted successfully.</p>
+        <p id="welcomeMessage"></p>
+        <a href="index.html" class="back-button">Back to Form</a>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const studentData = JSON.parse(sessionStorage.getItem('studentData'));
+            if (studentData && studentData.name) {
+                document.getElementById('welcomeMessage').textContent = `Welcome, ${studentData.name}!`;
+            } else {
+                document.getElementById('welcomeMessage').textContent = 'Welcome!';
+            }
+        });
+    </script>
+</body>
+</html>
