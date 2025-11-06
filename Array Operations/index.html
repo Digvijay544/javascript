@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Operations using JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="info">
+      <h2>Name: Vivek Bapu Gaikwad</h2>
+      <h3>Roll Number: 42119</h3>
+    <h1>Array Operations</h1>
+
+    <div class="shape-box">
+      <h2>Create Array</h2>
+      <label>Enter array elements (comma separated):</label>
+      <input type="text" id="arrayInput" placeholder="e.g. 10,20,30,40,50">
+      <button onclick="createArray()">Create Array</button>
+    </div>
+
+    <div class="shape-box">
+      <h2>Remove Specific Element</h2>
+      <label>Enter element to remove:</label>
+      <input type="text" id="removeElement" placeholder="Element to remove">
+      <button onclick="removeElement()">Remove</button>
+    </div>
+
+    <div class="shape-box">
+      <h2>Check if Element Exists</h2>
+      <label>Enter element to check:</label>
+      <input type="text" id="checkElement" placeholder="Element to check">
+      <button onclick="checkElement()">Check</button>
+    </div>
+
+    <div class="shape-box">
+      <h2>Empty Array</h2>
+      <button onclick="emptyArray()">Empty Array</button>
+    </div>
+
+    <div id="result"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Area Calculator using JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="info">
+      <h3>Name: Vivek Bapu Gaikwad</h3>
+      <h3>Roll Number: 42119</h3>
+    </div>
+    <h1>Geometric Area Calculator</h1>
+
+    <div class="shape-box">
+      <h2>Triangle</h2>
+      <label>Enter sides of Triangle:</label>
+      <input type="number" id="sideA" placeholder="Side A">
+      <input type="number" id="sideB" placeholder="Side B">
+      <input type="number" id="sideC" placeholder="Side C">
+      <button onclick="calculateTriangleArea()">Calculate</button>
+    </div>
+
+    <div class="shape-box">
+      <h2>Rectangle</h2>
+      <label>Enter Rectangle dimensions:</label>
+      <input type="number" id="rectLength" placeholder="Length">
+      <input type="number" id="rectBreadth" placeholder="Breadth">
+      <button onclick="calculateRectangleArea()">Calculate</button>
+    </div>
+
+    <div class="shape-box">
+      <h2>Circle</h2>
+      <label>Enter Circle radius:</label>
+      <input type="number" id="circleRadius" placeholder="Radius">
+      <button onclick="calculateCircleArea()">Calculate</button>
+    </div>
+
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
